@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="nx">
+<head>
+<meta charset='UTF-8'/>
+
+<script type='text/javascript' src='./src/module1st/view/abstract.js'></script>
+<script type='text/javascript' src='./src/module1st/message/queue.js'></script>
+<script type='text/javascript' src='./src/module1st/model/model.js'></script>
+<script type='text/javascript' src='./src/module1st/view/main.js'></script>
+
+<script type='text/javascript' src='./src/module2nd/view/kulululal.js'></script>
+<script type='text/javascript' src='./src/module2nd/view/kalapaxxi.js'></script>
+
+<script type='text/javascript' src='./src/module3rd/view/pixicacua.js'></script>
+
+<script type='text/javascript'>
+'use strict';
+
+let messageQueue = new MessageQueue();
+let model = new Model();
+
+let main = new MainView ( messageQueue, model);
+
+let pixiCacua = new PixiCacua ( messageQueue, model = new Model() );
+let kalapaxxi = new Kalapaxxi ( messageQueue, model = new Model() );
+let kulululal = new Kulululal ( messageQueue, model = new Model() );
+
+
+main.addViews ( [ pixiCacua, kalapaxxi, kulululal ] );
+// main.removeViews ( [ kulululal ] );
+// main.removeViews ( [ pixiCacua ] );
+// main.removeViews ( [] );
+
+main.init();
+main.sync();
+
+</script>
+
+</head>
+
+<body>
+
+
+
+
+
+
+</body>
+</html>
