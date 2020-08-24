@@ -12,6 +12,7 @@ let Kalapaxxi = function( messageQueue, model, view ) {
 
 	this.update = function ( event ) {
 		
+		document.write( this.view.replace( '{var1st}', '491' ) ); 
 		console.log( '>>> update(): ', event );
 	}
 }

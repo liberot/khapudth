@@ -21,6 +21,6 @@ let Main = function( messageQueue, model, view ) {
 
 	this.update = function () {
 
-		document.write( this.view.replace( '{var1st}', '491' ) ); 
+		// document.write( this.view.replace( '{var1st}', '491' ) ); 
 	}
 }
