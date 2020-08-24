@@ -3,15 +3,16 @@
 <head>
 <meta charset='UTF-8'/>
 
-<script type='text/javascript' src='./src/module1st/view/abstract.js'></script>
 <script type='text/javascript' src='./src/module1st/message/queue.js'></script>
 <script type='text/javascript' src='./src/module1st/model/model.js'></script>
+<script type='text/javascript' src='./src/module1st/controller/abstract.js'></script>
+<script type='text/javascript' src='./src/module1st/controller/main.js'></script>
 <script type='text/javascript' src='./src/module1st/view/main.js'></script>
 
-<script type='text/javascript' src='./src/module2nd/view/kulululal.js'></script>
-<script type='text/javascript' src='./src/module2nd/view/kalapaxxi.js'></script>
+<script type='text/javascript' src='./src/module2nd/controller/kulululal.js'></script>
+<script type='text/javascript' src='./src/module2nd/controller/kalapaxxi.js'></script>
 
-<script type='text/javascript' src='./src/module3rd/view/pixicacua.js'></script>
+<script type='text/javascript' src='./src/module3rd/controller/pixicacua.js'></script>
 
 <script type='text/javascript'>
 'use strict';
@@ -19,17 +20,18 @@
 let messageQueue = new MessageQueue();
 let model = new Model();
 
-let main = new MainView ( messageQueue, model);
+let main = new Main ( messageQueue, model, template1st );
 
 let pixiCacua = new PixiCacua ( messageQueue, model = new Model() );
 let kalapaxxi = new Kalapaxxi ( messageQueue, model = new Model() );
 let kulululal = new Kulululal ( messageQueue, model = new Model() );
 
+main.addModule ( [ pixiCacua, kalapaxxi, kulululal ] );
+// main.removeModule ( [ kulululal ] );
+// main.removeModule ( [ pixiCacua ] );
+// main.removeModule ( [] );
 
-main.addViews ( [ pixiCacua, kalapaxxi, kulululal ] );
-// main.removeViews ( [ kulululal ] );
-// main.removeViews ( [ pixiCacua ] );
-// main.removeViews ( [] );
+// now look what you've done you sick boring f***
 
 main.init();
 main.sync();
@@ -47,6 +49,3 @@ main.sync();
 
 </body>
 </html>
-
-
-

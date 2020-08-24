@@ -1,23 +1,6 @@
-// View 
-let MainView = function( messageQueue, model ) {
-	
-	this.__proto__ = __AbstractView__;
-	
-	this.messageQueue = messageQueue;
-	this.model = model;
-	
-	this.init = function () {
-	
-		this.messageQueue.notify ( new Event( 'Main.INITED', { date: new Date() } ) );
-	}
+let template1st = `
 
-	this.sync = function () {
+<div>this the template it is</div>
+<div>{var1st}</div>
 
-		this.messageQueue.notify ( new Event( 'Model.UPDATED', { data: [] } ) );
-	}
-
-	this.update = function ( event ) {
-		
-		console.log( '>>> update(): ', event );
-	}
-}
+`;
