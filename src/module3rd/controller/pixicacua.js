@@ -10,9 +10,9 @@ let PixiCacua = function( messageQueue, model, view ) {
 		this.messageQueue.notify ( new Event( 'PixiCacua.INITED', { date: new Date() } ) );
 	}
 
-	this.draw = function () {
+	this.draw = function ( event ) {
 		
-		document.write( this.view.replace( '{var1st}', '491' ) ); 
+		document.write( this.view.replace( '{var2nd}', event.title ) ); 
 	}
 
 	this.update = function ( event ) {

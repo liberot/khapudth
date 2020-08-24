@@ -1,12 +1,14 @@
 let template1st = `
 
-<div>this the template it is</div>
-<div>{var1st}</div>
-<div>this the template it is</div>
-<div>this the template it is</div>
-<div>this the template it is</div>
-<div>this the template it is</div>
-<div>this the template it is</div>
-<div>this the template it is</div>
+<ul>
+	<li>this the template it is</li>
+	<li>{var1st}</li>
+	<li>this the template it is</li>
+	<li>this the template it is</li>
+	<li>this the template it is</li>
+	<li>this the template it is</li>
+	<li>this the template it is</li>
+	<li>this the template it is</li>
+</ul>
 
 `;

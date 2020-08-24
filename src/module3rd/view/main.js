@@ -1,5 +1,8 @@
 let template2nd = `
 
-<div><i>the template this is<i></div>
+<ul>
+	<li><i>the template this is</i></li>
+	<li>{var2nd}</li>
+</ul>
 
 `;
