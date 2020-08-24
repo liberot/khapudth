@@ -1,7 +1,9 @@
-let AbstractController = function( messageQueue, model ) {
+let AbstractController = function( messageQueue, model, view ) {
 	
 	this.messageQueue = messageQueue;
 	this.model = model;
+	this.view = view;
+	
 	this.modules = [];
 
 	this.addModule = function ( modules ) {
