@@ -1,7 +1,8 @@
-let Kalapaxxi = function( messageQueue, model ) {
+let Kalapaxxi = function( messageQueue, model, view ) {
 
 	this.messageQueue = messageQueue;
 	this.model = model;
+	this.view = view;
 	
 	this.init = function () {
 

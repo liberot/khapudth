@@ -1,7 +1,8 @@
-let Kulululal = function( messageQueue, model ) {
+let Kulululal = function( messageQueue, model, view ) {
 
 	this.messageQueue = messageQueue;
 	this.model = model;
+	this.view = view;
 	
 	this.init = function () {
 
