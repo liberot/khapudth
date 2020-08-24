@@ -10,10 +10,6 @@ let Kalapaxxi = function( messageQueue, model, view ) {
 		this.messageQueue.notify ( new Event( 'Kalapaxxi.INITED', { date: new Date() } ) );	
 	}
 
-	this.draw = function () {
-		
-	}
-	
 	this.update = function ( event ) {
 		
 		console.log( '>>> update(): ', event );

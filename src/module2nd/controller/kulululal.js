@@ -10,10 +10,6 @@ let Kulululal = function( messageQueue, model, view ) {
 		this.messageQueue.notify ( new Event( 'Kulululal.INITED', { date: new Date() } ) );	
 	}
 
-	this.draw = function () {
-	
-	}
-
 	this.update = function ( event ) {
 			
 		console.log( '>>> update(): ', event );
