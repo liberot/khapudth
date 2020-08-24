@@ -11,8 +11,8 @@ let PixiCacua = function( messageQueue, model, view ) {
 	}
 
 	this.draw = function () {
-	
-		document.write( '<div>PixiCacua: ' +arguments[0].title +'</div>');
+		
+		document.write( this.view.replace( '{var1st}', '491' ) ); 
 	}
 
 	this.update = function ( event ) {

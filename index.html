@@ -13,6 +13,7 @@
 <script type='text/javascript' src='./src/module2nd/controller/kalapaxxi.js'></script>
 
 <script type='text/javascript' src='./src/module3rd/controller/pixicacua.js'></script>
+<script type='text/javascript' src='./src/module3rd/view/main.js'></script>
 
 <script type='text/javascript'>
 'use strict';
@@ -22,7 +23,7 @@ let model = new Model();
 
 let main = new Main ( messageQueue, model, template1st );
 
-let pixiCacua = new PixiCacua ( messageQueue, model = new Model() );
+let pixiCacua = new PixiCacua ( messageQueue, model = new Model(), template2nd );
 let kalapaxxi = new Kalapaxxi ( messageQueue, model = new Model() );
 let kulululal = new Kulululal ( messageQueue, model = new Model() );
 
