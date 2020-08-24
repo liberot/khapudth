@@ -1,7 +1,7 @@
-let Event = function ( title, load ) {
+let Event = function ( title, model ) {
 
 	this.title = title;
-	this.load = load;
+	this.model = model;
 }
 
 let MessageQueue = function () {
