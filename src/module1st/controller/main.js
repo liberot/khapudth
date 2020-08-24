@@ -8,18 +8,14 @@ let Main = function( messageQueue, model, view ) {
 	
 	this.init = function () {
 	
-		this.messageQueue.notify ( new Event( 'MainController.INITED', { date: new Date() } ) );
 		this.draw();
+		this.messageQueue.notify ( new Event( 'MainController.INITED', { date: new Date() } ) );
 	}
 
 	this.sync = function () {
 
+		//.... 
 		this.messageQueue.notify ( new Event( 'Model.UPDATED', { data: [] } ) );
-	}
-
-	this.update = function ( event ) {
-		
-		console.log( '>>> update(): ', event );
 	}
 
 	this.draw = function () {
