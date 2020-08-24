@@ -14,7 +14,7 @@ let AbstractController = function( messageQueue, model, view ) {
 		}
 	}
 
-	this.removeModule = function ( views ) {
+	this.removeModule = function ( modules ) {
 		
 		let tmp = [];
 		for( var idx in this.modules ) { 
