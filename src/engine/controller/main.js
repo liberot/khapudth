@@ -14,9 +14,9 @@ let Main = function( messageQueue, model, view ) {
 
 	this.sync = function () {
 
-		//.... syncs model from some ...
+		//.... syncs model from some source...
 		// this.model = result.model; 
-		this.messageQueue.notify ( new Event( 'Model.UPDATED', { data: [] } ) );
+		this.messageQueue.notify ( new Event( 'Model.UPDATED', { data: [], date: new Date() } ) );
 	}
 
 	this.update = function () {
