@@ -1,4 +1,4 @@
-let AbstractController = function( messageQueue, model, view ) {
+let AbstractController = function( messageQueue, model, link, view ) {
 	
 	this.modules = [];
 

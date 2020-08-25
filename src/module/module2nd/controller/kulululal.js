@@ -1,4 +1,4 @@
-let Kulululal = function( messageQueue, model, view, link ) {
+let Kulululal = function( messageQueue, model, link, view ) {
 
 	this.messageQueue = messageQueue;
 	this.model = model;
