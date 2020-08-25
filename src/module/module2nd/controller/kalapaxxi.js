@@ -2,8 +2,8 @@ let Kalapaxxi = function( messageQueue, model, link, view ) {
 
 	this.messageQueue = messageQueue;
 	this.model = model;
-	this.view = view;
 	this.link = link;
+	this.view = view;
 	
 	this.init = function () {
 
@@ -24,7 +24,7 @@ let Kalapaxxi = function( messageQueue, model, link, view ) {
 			let index = vars[ idx ];
 			let title = vars[ idx ].replace( /[\{\}]/g, '' );
 			let value = this.model[ title ];
-			if( null != value ) {
+			if( null != title && null != value ) {
 				this.view = this.view.replace( index, value );
 			}
 		}
