@@ -13,6 +13,5 @@ let Kulululal = function( messageQueue, model, link, view ) {
 
 	this.update = function ( event ) {
 			
-		console.log( '>>> update(): ', event );
 	}	
 }

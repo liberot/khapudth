@@ -7,7 +7,7 @@ let template1st = `
 	<li>this the template it is</li>
 	<li>this the template it is</li>
 	<li>this the template it is</li>
-	<li>this the template it is</li>
+	<li>{var2nd}</li>
 	<li>this the template it is</li>
 </ul>
 

@@ -14,7 +14,5 @@ let PixiCacua = function( messageQueue, model, link, view ) {
 	this.update = function ( event ) {
 
 		document.write( this.view.replace( '{var2nd}', event.title ) ); 
-		
-		console.log( '>>> update(): ', event );
 	}
 }
