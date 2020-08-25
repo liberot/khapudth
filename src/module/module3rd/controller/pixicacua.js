@@ -1,8 +1,9 @@
-let PixiCacua = function( messageQueue, model, view ) {
+let PixiCacua = function( messageQueue, model, link, view ) {
 	
 	this.messageQueue = messageQueue;
 	this.model = model;
 	this.view = view;
+	this.link = link;
 	
 	this.init = function () {
 

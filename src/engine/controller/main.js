@@ -26,15 +26,16 @@ let Main = function( messageQueue, model, link, view ) {
 		this.messageQueue.notify ( new Event( 'Model.UPDATED', { data: [], date: new Date() } ) );
 	}
 
-	this.update = function () {
+	this.update = function ( event ) {
 		
-		let loc = '/location/of/an/entry';
+		// event.model...
+		//....
+		this.setLink ( '/location/of/an/entry' ); 
+	}
+
+	this.setLink = function( loc ) {
+
 		this.link.set( loc );
-		
-		this.messageQueue.notify ( 
-			new Event( 'MainController.LINK_IS_SET', { 
-				link: loc
-			} ) 
-		);
+		this.messageQueue.notify ( new Event( 'Link.SET', { link: loc } ) );
 	}
 }

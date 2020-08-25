@@ -28,9 +28,9 @@ let model = new Model();
 
 let main = new Main ( messageQueue, model, link, template1st );
 
-let pixiCacua = new PixiCacua ( messageQueue, model = new Model(), template2nd );
-let kalapaxxi = new Kalapaxxi ( messageQueue, model = new Model(), template1st );
-let kulululal = new Kulululal ( messageQueue, model = new Model() );
+let pixiCacua = new PixiCacua ( messageQueue, model = new Model(), link, template2nd );
+let kalapaxxi = new Kalapaxxi ( messageQueue, model = new Model(), link, template1st );
+let kulululal = new Kulululal ( messageQueue, model = new Model(), link );
 
 main.addModule ( [ pixiCacua, kalapaxxi, kulululal ] );
 // main.removeModule ( [ kulululal ] );
