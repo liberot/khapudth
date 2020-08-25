@@ -4,6 +4,7 @@
 <meta charset='UTF-8'/>
 
 <script type='text/javascript' src='./src/engine/queue/main.js'></script>
+<script type='text/javascript' src='./src/engine/link/main.js'></script>
 
 <script type='text/javascript' src='./src/engine/model/model.js'></script>
 <script type='text/javascript' src='./src/engine/controller/abstract.js'></script>
@@ -20,10 +21,12 @@
 <script type='text/javascript'>
 'use strict';
 
+let link = new Deeplink();
+	
 let messageQueue = new MessageQueue();
 let model = new Model();
 
-let main = new Main ( messageQueue, model, template1st );
+let main = new Main ( messageQueue, model, link, template1st );
 
 let pixiCacua = new PixiCacua ( messageQueue, model = new Model(), template2nd );
 let kalapaxxi = new Kalapaxxi ( messageQueue, model = new Model(), template1st );

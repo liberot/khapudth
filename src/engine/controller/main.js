@@ -1,10 +1,11 @@
-let Main = function( messageQueue, model, view ) {
+let Main = function( messageQueue, model, link, view ) {
 	
 	this.__proto__ = __AbstractController__;
 	
 	this.messageQueue = messageQueue;
 	this.model = model;
 	this.view = view;
+	this.link = link;
 	
 	this.init = function () {
 	
@@ -20,7 +21,9 @@ let Main = function( messageQueue, model, view ) {
 	}
 
 	this.update = function () {
-
+		
+		this.link.setLink( '#/location/of/an/entry');
+		this.link.evalLink();
 		// document.write( this.view.replace( '{var1st}', '491' ) ); 
 	}
 }
