@@ -36,6 +36,6 @@ let Main = function( messageQueue, model, link, view ) {
 	this.setLink = function( loc ) {
 
 		this.link.set( loc );
-		this.messageQueue.notify ( new Event( 'Link.SET', { link: loc } ) );
+		this.messageQueue.notify ( new Event( 'Lunk.SET', { link: loc } ) );
 	}
 }
