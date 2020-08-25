@@ -10,7 +10,12 @@ let Main = function( messageQueue, model, link, view ) {
 	this.init = function () {
 	
 		this.messageQueue.register ( new Event( 'Model.UPDATED' ), this, 'update' );
-		this.messageQueue.notify ( new Event( 'MainController.INITED', { date: new Date() } ) );
+		this.messageQueue.notify ( 
+			new Event( 'MainController.INITED', { 
+				link: this.link.get(),
+				date: new Date() 
+			} ) 
+		);
 	}
 
 	this.sync = function () {
@@ -22,8 +27,12 @@ let Main = function( messageQueue, model, link, view ) {
 
 	this.update = function () {
 		
-		this.link.set( '/location/of/an/entry' );
-		this.link.get();
-		// document.write( this.view.replace( '{var1st}', '491' ) ); 
+		let loc = '/location/of/an/entry';
+		this.link.set( loc );
+		this.messageQueue.notify ( 
+			new Event( 'MainController.LINK_IS_SET', { 
+				link: loc
+			} ) 
+		);
 	}
 }
