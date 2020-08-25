@@ -15,7 +15,7 @@ let Kalapaxxi = function( messageQueue, model, link, view ) {
 	this.update = function ( event ) {
 		
 		this.model.var1st = '491';
-		this.model.var2nd = 'The Continious Spirit of The Almighty Zwagazhul';
+		this.model.var2nd = 'The Continious Spirit of Zwagazhul Allmighty';
 
 		// variable vs template fertauschi
 		let vars = this.view.match(/\{(.{1,32}?)\}/g);
