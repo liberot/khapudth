@@ -28,7 +28,7 @@ let MessageQueue = function () {
 
 	this.register = function ( subscription ) {
 		
-		this.log( 'register: ', event );
+		this.log( 'register: ', subscription );
 
 		// ..brilliant....
 		// ref raf 
