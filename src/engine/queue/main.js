@@ -1,3 +1,10 @@
+let Subscription = function ( title, target, method ) {
+	
+	this.title = title;
+	this.target = target;
+	this.method = method;
+}
+
 let Event = function ( title, model ) {
 
 	this.title = title;
@@ -14,40 +21,37 @@ let MessageQueue = function () {
 		for( let idx in this.subscriptions ) {
 			let subscription = this.subscriptions[idx];
 			if( event.title == subscription.title ) {
-				subscription.target[subscription.callback] ( event ); 
+				subscription.target[ subscription.method ] ( event ); 
 			}
 		}
 	} 
 
-	this.register = function ( event, target, callback ) {
+	this.register = function ( subscription ) {
 		
 		this.log( 'register: ', event );
 
 		// ..brilliant....
 		// ref raf 
-		// this.unregister ( event, target, callback ); 
-		
-		let subscription = event;
-			subscription.target = target;
-			subscription.callback = callback;
+		// this.unregister ( subscription ); 
 		
 		this.subscriptions.push ( subscription );
 	}
 
-	this.unregister = function ( event, target, callback ) {
+	this.unregister = function ( subscription ) {
 
 		this.log( 'unregister: ', event );
 		
 		let tmp = [];
 		for( let idx in this.subscriptions ) {
-			let subscription = this.subscriptions[idx];
-			if( event.title == subscription.title ) {
-				if( target == subscription.target ) {
-					if( callback == subscription.callback ) {
+			let sub = this.subscriptions[idx];
+			if( subscription.title == sub.title ) {
+				if( subscription.target == sub.target ) {
+					if( subscription.method == sub.method ) {
 						continue;
 					}
 				}
 			}
+
 			tmp.push( subscription );	
 		}
 

@@ -7,7 +7,7 @@ let PixiCacua = function( messageQueue, model, link, view ) {
 	
 	this.init = function () {
 
-		this.messageQueue.register ( new Event( 'Model.UPDATED' ), this, 'update' );
+		this.messageQueue.register ( new Subscription( 'Model.UPDATED', this, 'update' ));
 		this.messageQueue.notify ( new Event( 'PixiCacua.INITED', { date: new Date() } ) );
 	}
 

@@ -7,8 +7,8 @@ let Kalapaxxi = function( messageQueue, model, link, view ) {
 	
 	this.init = function () {
 
-		this.messageQueue.register ( new Event( 'Model.UPDATED' ), this, 'update' );
-		this.messageQueue.register ( new Event( 'Lunk.SET' ), this, 'logTheDeeplink' );
+		this.messageQueue.register ( new Subscription( 'Model.UPDATED', this, 'update' ));
+		this.messageQueue.register ( new Subscription( 'Lunk.SET', this, 'logTheDeeplink' ));
 		this.messageQueue.notify ( new Event( 'Kalapaxxi.INITED', { date: new Date() } ) );	
 	}
 
@@ -19,6 +19,7 @@ let Kalapaxxi = function( messageQueue, model, link, view ) {
 	}
 
 	this.logTheDeeplink = function ( event ) {
+
 		console.log( '>>> logTheDeeplink(): ', event.model );
 	} 
 }
