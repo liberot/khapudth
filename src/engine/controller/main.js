@@ -22,8 +22,8 @@ let Main = function( messageQueue, model, link, view ) {
 
 	this.update = function () {
 		
-		this.link.setLink( '#/location/of/an/entry');
-		this.link.evalLink();
+		this.link.set( '/location/of/an/entry' );
+		this.link.get();
 		// document.write( this.view.replace( '{var1st}', '491' ) ); 
 	}
 }

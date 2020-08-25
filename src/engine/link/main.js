@@ -1,12 +1,12 @@
  
 let Deeplink = function () {
 
-	this.evalLink = function () {
+	this.get = function () {
 		
 		this.log( window.location.hash.substr( 1 ) );		
 	}
 
-	this.setLink = function ( chunk ) {
+	this.set = function ( chunk ) {
 
 		let lnk = '';
 			lnk = window.location.href.substr( 1 );
