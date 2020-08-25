@@ -10,6 +10,7 @@ let Main = function( messageQueue, model, link, view ) {
 	this.init = function () {
 	
 		this.messageQueue.register ( new Event( 'Model.UPDATED' ), this, 'update' );
+		
 		this.messageQueue.notify ( 
 			new Event( 'MainController.INITED', { 
 				link: this.link.get(),
@@ -29,6 +30,7 @@ let Main = function( messageQueue, model, link, view ) {
 		
 		let loc = '/location/of/an/entry';
 		this.link.set( loc );
+		
 		this.messageQueue.notify ( 
 			new Event( 'MainController.LINK_IS_SET', { 
 				link: loc

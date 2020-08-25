@@ -3,7 +3,7 @@ let Deeplink = function () {
 
 	this.get = function () {
 		
-		this.log( window.location.hash.substr( 1 ) );		
+		return ( window.location.hash.substr( 1 ) );		
 	}
 
 	this.set = function ( chunk ) {
