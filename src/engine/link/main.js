@@ -1,5 +1,4 @@
- 
-let Deeplink = function () {
+ let Deeplink = function () {
 
 	this.get = function () {
 		

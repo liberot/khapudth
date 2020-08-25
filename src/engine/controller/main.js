@@ -30,7 +30,7 @@ let Main = function( messageQueue, model, link, view ) {
 		
 		// event.model...
 		//....
-		this.setLink ( '/location/of/an/entry' ); 
+		this.setLink ( '/one/two/the/turnshuh/crew' ); 
 	}
 
 	this.setLink = function( loc ) {

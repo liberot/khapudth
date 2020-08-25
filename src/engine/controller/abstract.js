@@ -20,6 +20,7 @@ let AbstractController = function( messageQueue, model, link, view ) {
 					found = true;
 					let target = this.modules[ idx ];
 						target.messageQueue.unregisterAllSubscriptions( target );
+					
 					continue;
 				}
 			}
